@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1차시 · 생성형 AI의 이해와 텍스트 AI 활용 · 똑똑한 AI 활용법 A to Z</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="page-session">
+
+<div class="statusbar"></div>
+
+<header class="header">
+  <div class="wrap">
+    <span class="logo"></span>
+    <p class="eyebrow"></p>
+    <h1>생성형 AI의 이해와 텍스트 AI 활용</h1>
+    <p class="subtitle">AI를 아는 것에서, AI를 활용하는 것으로</p>
+    <span class="guide">💡 실습 프롬프트는 복사 버튼으로 붙여넣으세요</span>
+  </div>
+</header>
+
+<nav class="nav" id="site-nav"></nav>
+
+<main>
+  <div class="wrap">
+
+    <section class="card" id="flow">
+      <h2><span class="num">00</span>오늘의 흐름</h2>
+      <p class="lead">문제를 정의하는 것은 사람, 실행을 도와주는 것은 AI입니다. 아래 5가지 순서로 오늘 수업을 진행합니다.</p>
+
+      <table class="table">
+        <thead><tr><th>순서</th><th>내용</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1</strong></td><td>AI 이해</td></tr>
+          <tr><td><strong>2</strong></td><td>생성형 AI 란</td></tr>
+          <tr><td><strong>3</strong></td><td>프롬프트 최적화 기법</td></tr>
+          <tr><td><strong>4</strong></td><td>ChatGPT · Gemini · Claude 비교</td></tr>
+          <tr><td><strong>5</strong></td><td>Gemini 활용과 Gem 활용</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box note">
+        <span class="box-title">📌 핵심 메시지</span>
+        AI를 아는 것에서, AI를 활용하는 것으로 — 사람은 문제를 정의하고, AI는 실행을 돕습니다.
+      </div>
+    </section>
+
+    <section class="card" id="ai">
+      <h2><span class="num">01</span>AI 이해</h2>
+      <p class="lead">AI(Artificial Intelligence, 인공지능)란 무엇일까요?</p>
+
+      <ol class="steps">
+        <li><b>데이터</b><span>많은 양의 자료를 모읍니다</span></li>
+        <li><b>학습</b><span>자료 속 규칙을 익힙니다</span></li>
+        <li><b>패턴</b><span>반복되는 구조를 찾습니다</span></li>
+        <li><b>판단 · 생성</b><span>새로운 상황에 답을 냅니다</span></li>
+      </ol>
+
+      <div class="box note">
+        <span class="box-title">📌 AI란</span>
+        인간의 지적 활동을 컴퓨터가 수행하도록 만든 기술입니다.
+      </div>
+
+      <h3>생성형 AI는 무엇이 다를까요?</h3>
+      <table class="table">
+        <thead><tr><th>구분</th><th>하는 일</th></tr></thead>
+        <tbody>
+          <tr><td><strong>기존 AI</strong></td><td>분류 · 예측 · 판단</td></tr>
+          <tr><td><strong>생성형 AI</strong></td><td>텍스트 · 이미지 · 음성 · 영상 생성 — 새로운 결과물을 만들어냅니다</td></tr>
+        </tbody>
+      </table>
+
+      <h3>검색엔진 vs 생성형 AI</h3>
+      <table class="table">
+        <thead><tr><th>구분</th><th>하는 일</th><th>비유</th></tr></thead>
+        <tbody>
+          <tr><td><strong>검색엔진</strong></td><td>정보를 찾는다 — 이미 있는 자료 목록을 보여줍니다</td><td>도서관 사서</td></tr>
+          <tr><td><strong>생성형 AI</strong></td><td>결과를 생성한다 — 내 상황에 맞는 결과물을 만들어 줍니다</td><td>나의 AI 비서</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box warn">
+        <span class="box-title">⚠ AI는 똑똑하지만 항상 맞지는 않습니다</span>
+        AI 결과 ≠ 항상 정답 — <b>환각</b>(그럴듯한 거짓을 만들어냄), <b>오류</b>(숫자와 사실을 틀림), <b>오래된 정보</b>(최신 내용이 아닐 수 있음). "AI가 자신 있게 말하면 사실일 가능성이 높다" → <b>X</b>, 자신감과 정확도는 별개입니다.
+      </div>
+    </section>
+
+    <section class="card" id="trend">
+      <h2><span class="num">02</span>2026 AI 변화</h2>
+      <p class="lead">2026년 AI는 어디까지 왔을까?</p>
+
+      <table class="table">
+        <thead><tr><th>구분</th><th>내용</th></tr></thead>
+        <tbody>
+          <tr><td><strong>텍스트 AI</strong></td><td>질문하면 글로 답합니다</td></tr>
+          <tr><td><strong>멀티모달</strong></td><td>이미지 · 음성 · 문서까지 함께</td></tr>
+          <tr><td><strong>AI Agent</strong></td><td>스스로 단계를 나눠 실행합니다 — AI에게 일을 맡긴다</td></tr>
+          <tr><td><strong>AGI</strong></td><td>사람처럼 다양한 지적 업무를 배우고, 이해하고, 추론하고, 새로운 상황에 적응할 수 있는 AI</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box note">
+        <span class="box-title">📌 핵심 메시지</span>
+        AI는 '대답하는 도구'에서 '일을 수행하는 도구'로 발전하고 있습니다.
+      </div>
+
+      <table class="table">
+        <thead><tr><th>시기</th><th>일하는 방식</th></tr></thead>
+        <tbody>
+          <tr><td><strong>과거</strong></td><td>사람이 찾고 정리하고 작성한다</td></tr>
+          <tr><td><strong>현재</strong></td><td>AI와 함께 찾고 정리하고 작성한다</td></tr>
+          <tr><td><strong>미래</strong></td><td>사람이 문제를 정의, AI가 실행을 지원</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box tip">
+        <span class="box-title">💡 사람에게 남는 일</span>
+        문제 정의 + 질문 + 검증 + 판단
+      </div>
+    </section>
+
+    <section class="card" id="prompt">
+      <h2><span class="num">03</span>프롬프트 최적화 기법</h2>
+      <p class="lead">왜 AI에게 원하는 답이 나오지 않을까요? "광고 문구 써줘"처럼 짧은 요청은 너무 평범한 결과를 낳습니다. AI가 못해서가 아니라 <b>설명이 부족했을</b> 수 있습니다.</p>
+
+      <div class="box note">
+        <span class="box-title">📌 프롬프트란</span>
+        Prompt = AI에게 주는 지시문. 무엇을, 어떻게, 어떤 형태로 해달라고 말해주는 문장입니다. ("이런 일을 이렇게 해줘"라고 업무를 부탁하는 것과 같습니다.)
+      </div>
+
+      <h3>UPDATE · 프롬프트 작성법이 바뀌었습니다</h3>
+      <table class="table">
+        <thead><tr><th>구분</th><th>구성 요소</th></tr></thead>
+        <tbody>
+          <tr><td><strong>OLD 공식</strong><br><span class="muted">5요소 · 매번 채움</span></td><td>ROLE(역할) · GOAL(목표) · CONTEXT(맥락) · CONSTRAINT(조건) · OUTPUT(출력)</td></tr>
+          <tr><td><strong>NEW 공식</strong><br><span class="muted">기본 4 + 선택 3</span></td><td>기본: CONTEXT(맥락) · INSTRUCTION(지시) · FORMAT(형식) · AUDIENCE(대상)<br>선택(필요할 때만): ROLE · EXAMPLE · CONSTRAINT</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box tip">
+        <span class="box-title">💡 핵심</span>
+        "역할을 매번 넣는 것"보다 "상황과 대상"을 정확히 주는 것이 중요해졌습니다.
+      </div>
+
+      <h3>선택 요소, 언제 추가할까?</h3>
+      <table class="table">
+        <thead><tr><th>질문</th><th>추가할 요소</th></tr></thead>
+        <tbody>
+          <tr><td>전문가 관점 · 캐릭터가 필요한가?</td><td>→ Role 추가</td></tr>
+          <tr><td>출력 형태 · 톤이 특이한가?</td><td>→ Example 추가</td></tr>
+          <tr><td>환각 · 범위 이탈 위험이 있는가?</td><td>→ Constraint 추가</td></tr>
+          <tr><td>셋 다 아니라면?</td><td>→ 기본 4요소만으로 충분</td></tr>
+        </tbody>
+      </table>
+
+      <h3>① 실습 1 · 프롬프트 직접 만들어보기</h3>
+      <p class="lead">AI에게 시키고 싶은 일을 하나만 정한 뒤, 아래 네 칸을 채워 실제로 입력해보세요.</p>
+      <div class="prompt">
+        <div class="prompt-head"><span class="label">실습 1 · 프롬프트 템플릿</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
+        <pre>[CONTEXT 맥락] 예) 현재 상황, 배경은 ○○야
+
+[INSTRUCTION 지시] 예) ○○를 해줘
+
+[FORMAT 형식] 예) ○○ 형태로, 분량은 ○○로
+
+[AUDIENCE 대상] 예) 결과를 볼 사람은 ○○야
+
+선택 요소 (필요할 때만 추가)
+[ROLE 역할]
+[EXAMPLE 예시]
+[CONSTRAINT 제약조건]</pre>
+      </div>
+
+      <h3>② 실습 2 · 홍보 콘텐츠 프롬프트 (실전 예시)</h3>
+      <p class="lead">CONTEXT + INSTRUCTION + FORMAT + AUDIENCE 순서로 맥락을 알려주고 → 원하는 결과를 지시하고 → 형식을 정하고 → 대상을 알려주는 실제 프롬프트입니다.</p>
+      <div class="prompt">
+        <div class="prompt-head"><span class="label">실습 2 · 홍보 콘텐츠 프롬프트</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
+        <pre>실무자 대상 AI 엑셀 자동화 특강을 홍보할 SNS 콘텐츠가 필요해.
+교육의 핵심 장점과 차별점을 강조하고, 신청으로 이어질 수 있도록
+친근하고 설득력 있는 홍보 문구를 작성해줘.
+인스타그램·네이버 블로그·카카오톡에 활용할 수 있도록 각각 작성하고,
+이모지와 해시태그 3개를 포함해줘.
+AI나 엑셀 자동화가 어렵게 느껴지는 20~40대 직장인과 실무자를 대상으로 작성해줘.</pre>
+      </div>
+
+      <div class="box tip">
+        <span class="box-title">💡 핵심 포인트</span>
+        정보가 구체적일수록 결과는 더 좋아집니다. 선택 3요소(ROLE·EXAMPLE·CONSTRAINT)는 필요한 경우에만 추가하세요.
+      </div>
+    </section>
+
+    <section class="card" id="compare">
+      <h2><span class="num">04</span>ChatGPT · Gemini · Claude 비교</h2>
+      <p class="lead">결과보다 "어떻게 물었고, 어떻게 확인했는가"가 중요합니다.</p>
+
+      <table class="table">
+        <thead><tr><th>도구</th><th>강점</th></tr></thead>
+        <tbody>
+          <tr><td><strong>ChatGPT</strong></td><td>질문 → 조사 → 출처 확인 → 검토, 리서치에 강함</td></tr>
+          <tr><td><strong>Gemini</strong></td><td>조사하고 확장하기 — Deep Research(심층조사) · Canvas(공동편집) · Gems(반복지침 저장)</td></tr>
+          <tr><td><strong>Claude</strong></td><td>자료 → 분석 → 핵심 내용 → 결과, 긴 자료를 이해하고 정리하는 데 강함</td></tr>
+        </tbody>
+      </table>
+
+      <h3>도구별 실습 프롬프트</h3>
+      <div class="prompt">
+        <div class="prompt-head"><span class="label">ChatGPT · 리서치 프롬프트</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
+        <pre>반도체 소재 산업의 최근 동향을 조사해줘.</pre>
+      </div>
+      <div class="prompt">
+        <div class="prompt-head"><span class="label">Gemini · 조사 프롬프트</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
+        <pre>충남지역 여성의 지역 정착을 위한 지원전략을 조사해줘.</pre>
+      </div>
+      <div class="prompt">
+        <div class="prompt-head"><span class="label">Claude · 자료 정리 프롬프트</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
+        <pre>이 자료의 핵심 내용을 정리하고 중요한 근거를 구분해줘.</pre>
+      </div>
+    </section>
+
+    <section class="card" id="gemini">
+      <h2><span class="num">05</span>Gemini 활용과 GEM 활용</h2>
+      <p class="lead">AI를 아는 것에서, AI를 활용하는 것으로 — Gemini의 도구 기능과 나만의 비서 GEM을 만들어봅니다.</p>
+
+      <h3>Gemini 도구 기능</h3>
+      <table class="table">
+        <thead><tr><th>기능</th><th>내용</th><th>실무 활용</th></tr></thead>
+        <tbody>
+          <tr><td><strong>이미지 만들기</strong></td><td>텍스트 프롬프트를 고해상도 이미지로 즉시 변환</td><td>발표 자료 삽화, 카드뉴스 배경, SNS 홍보 이미지</td></tr>
+          <tr><td><strong>동영상 만들기</strong></td><td>텍스트나 이미지를 바탕으로 짧은 영상 생성</td><td>교육용 숏폼, 마케팅 인트로 영상 소스</td></tr>
+          <tr><td><strong>음악 만들기</strong></td><td>장르·분위기를 묘사하면 저작권 걱정 없는 음악 생성</td><td>교육용 영상 BGM, 팟캐스트 오프닝</td></tr>
+          <tr><td><strong>캔버스(Canvas)</strong></td><td>AI와 나란히 문서를 작성·수정하는 공동 편집 워크스페이스</td><td>기획서 세부 다듬기, 보고서 톤앤매너 일괄 수정</td></tr>
+          <tr><td><strong>딥 리서치</strong></td><td>여러 단계의 심층 웹 검색으로 자료를 수집·정리</td><td>최신 트렌드 조사, 경쟁사 분석, 정책 자료 수집</td></tr>
+          <tr><td><strong>가이드 학습</strong></td><td>주제를 입력하면 목차를 짜고 퀴즈를 내는 맞춤형 튜터</td><td>신규 툴 도입 시 임직원 교육</td></tr>
+        </tbody>
+      </table>
+
+      <h3>모델 선택하는 법 — 일의 무게에 맞춰 골라 쓰자</h3>
+      <table class="table">
+        <thead><tr><th>모델</th><th>특징</th><th>활용 업무</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Flash</strong></td><td>즉각적인 답변이 필요할 때</td><td>업무 이메일 초안, 간단한 문구, 빠른 정보 확인</td></tr>
+          <tr><td><strong>Thinking</strong></td><td>복잡하고 심층적인 작업에 유리</td><td>보고서 작성, 정책 분석, 논리적 구조 잡기</td></tr>
+          <tr><td><strong>Pro</strong></td><td>수학 · 정밀 작업에 가장 추천</td><td>데이터 분석, 수치 계산, 예산 시뮬레이션</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box tip">
+        <span class="box-title">💡 5초 답을 5분 기다리거나, 5분 답을 5초로 끝내면 손해</span>
+        일의 무게에 맞는 모델을 고르는 것이 속도와 품질을 모두 잡는 방법입니다.
+      </div>
+
+      <h3>③ 실습 3 · Deep Research로 심층 조사하기</h3>
+      <div class="prompt">
+        <div class="prompt-head"><span class="label">실습 3 · Deep Research 프롬프트</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
+        <pre>2026년 상반기 해외 여행지 중 60대 부부와 대학생 자녀가
+함께 가기 좋은 곳 3곳을 추천해줘.
+단순 추천이 아니라 각 지역의 최신 축제 일정, 예상 비용(항공/숙박),
+그리고 구글 검색과 내 드라이브의 '가족 여행' 폴더 자료를 참고해서
+심층 보고서를 써줘.</pre>
+      </div>
+
+      <div class="box note">
+        <span class="box-title">📌 참고</span>
+        Deep Research는 여러 자료를 찾아 조사 보고서 형태로 정리해주고, 이어서 Canvas로 옮기면 "가족 여행 체크리스트"나 "일정 요약 인포그래픽"처럼 결과물을 다듬어 확장할 수 있습니다.
+      </div>
+
+      <h3>GEM이란 — 나만의 맞춤형 AI 비서</h3>
+      <p class="lead">반복되는 업무·질문을 미리 정한 역할과 규칙으로 저장해두는 기능입니다.</p>
+      <table class="table">
+        <thead><tr><th>구분</th><th>일반 챗</th><th>GEM</th></tr></thead>
+        <tbody>
+          <tr><td><strong>특징</strong></td><td>매번 새 프롬프트 입력, 역할을 매번 다시 설명</td><td>한 번 등록 → 클릭 호출, 역할·말투·형식 영구 저장</td></tr>
+          <tr><td><strong>비유</strong></td><td>임시 직원 — 일회성</td><td>정규직 — 부서 공유 가능</td></tr>
+        </tbody>
+      </table>
+
+      <h3>GEM 설계 5가지 질문</h3>
+      <p class="lead">이 5가지가 곧 GEM의 시스템 프롬프트가 됩니다.</p>
+      <table class="table">
+        <thead><tr><th>질문</th><th>예시</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1. 반복 작업 자동화</strong> — 매번 하는 작업은?</td><td>민원 답변 / 회의록 / 공문 초안</td></tr>
+          <tr><td><strong>2. 맞춤형 지식 학습</strong> — 참고 자료는?</td><td>조례 · 매뉴얼 · 이전 답변 사례</td></tr>
+          <tr><td><strong>3. 고정 형식</strong> — 결과물 형식이 있나?</td><td>공문서 양식 · 표 · 개조식</td></tr>
+          <tr><td><strong>4. 톤앤매너</strong> — 꼭 지킬 말투는?</td><td>공문서체 · 친절 답변체 · 보고체</td></tr>
+          <tr><td><strong>5. 금지 정보</strong> — 출력하면 안 되는 정보는?</td><td>개인정보 · 미확정 수치 · 대외비</td></tr>
+        </tbody>
+      </table>
+
+      <h3>④ 실습 4 · 나만의 GEM 만들기</h3>
+      <p class="lead"><code>[주제]</code> 자리에 만들고 싶은 GEM 주제를 채워 사용하세요.</p>
+      <div class="prompt">
+        <div class="prompt-head"><span class="label">실습 4 · GEM 설계 프롬프트</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
+        <pre>당신은 구글 젬스(Gems) 설계 전문가입니다.
+[주제]에 대한 젬을 만들기 위해 "젬 이름", "설명", 그리고
+네 가지 항목을 포함한 "젬 지침"을 작성하세요.
+출력 형식은 반드시 아래 예시처럼 작성하세요.
+
+[출력 형식 예시]
+■ 젬 이름:
+■ 설명:
+■ 젬 지침
+페르소나:
+작업:
+관련 정보:
+형식:
+
+[작성 규칙]
+1. 젬 이름 — 주제의 핵심 기능이나 특징이 직관적으로 드러나는 매력적인 제목을 작성하세요.
+2. 설명 — 이 Gem이 어떤 역할을 하는지 1~2문장으로 간결하게 설명하세요.
+3. 페르소나(Persona) — Gem이 어떤 역할과 말투로 대화할지 구체적으로 설명하세요.
+4. 작업(Task) — Gem이 수행해야 할 일이나 사용자에게 제공할 도움을 명확히 제시하세요.
+5. 관련 정보(Info) — Gem이 참고할 배경 정보나 입력값 예시를 포함하세요.
+6. 형식(Format) — 결과물이 어떤 형태로 나와야 하는지 구체적으로 지정하세요.
+
+[주제]
+예) 국내여행 플래너 / 민원 응답 비서 / 회의록 정리 비서</pre>
+      </div>
+
+      <div class="box warn">
+        <span class="box-title">⚠ 주의</span>
+        GEM에 개인정보 · 미확정 수치 · 대외비를 다루게 할 경우, "출력하면 안 되는 정보"를 반드시 지침에 명시하세요.
+      </div>
+    </section>
+
+    <section class="card" id="wrap">
+      <h2><span class="num">06</span>마무리</h2>
+      <p class="lead">AI가 만든 결과, 그대로 사용해도 될까요? AI는 초안을 만들고, 사람은 완성합니다.</p>
+
+      <ol class="steps">
+        <li><b>AI 초안</b><span>AI가 만든 첫 결과</span></li>
+        <li><b>사실 확인</b><span>숫자 · 출처 · 최신 여부</span></li>
+        <li><b>표현 수정</b><span>어색한 문장 다듬기</span></li>
+        <li><b>목적에 맞게 편집</b><span>대상과 채널에 맞추기</span></li>
+        <li><b>최종 콘텐츠</b><span>내가 책임지는 결과물</span></li>
+      </ol>
+
+      <h3>AI를 잘 쓰는 사람의 5가지 원칙</h3>
+      <table class="table">
+        <thead><tr><th>원칙</th><th>내용</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1. 개인정보 보호</strong></td><td>이름 · 연락처 · 내부 자료는 넣지 않습니다</td></tr>
+          <tr><td><strong>2. 사실 확인</strong></td><td>숫자와 출처는 직접 확인합니다</td></tr>
+          <tr><td><strong>3. 저작권 확인</strong></td><td>공개하기 전에 권리를 확인합니다</td></tr>
+          <tr><td><strong>4. 비판적 검토</strong></td><td>그럴듯한 문장일수록 한 번 더 의심합니다</td></tr>
+          <tr><td><strong>5. 최종 판단은 사람</strong></td><td>책임은 AI가 아니라 사람이 집니다</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box note">
+        <span class="box-title">📌 오늘 배운 것</span>
+        <b>이해</b>(AI와 생성형 AI의 차이) · <b>질문</b>(프롬프트 4+3요소) · <b>비교</b>(세 가지 텍스트 AI) · <b>생성</b>(홍보 콘텐츠와 GEM) · <b>검증</b>(사실 확인과 최종 판단). AI는 도구입니다. 결과를 만드는 것은 그것을 다루는 사람입니다.
+      </div>
+
+      <div class="box tip">
+        <span class="box-title">💡 한 문장만 채워보세요</span>
+        나는 내일부터 AI를 ________ 하는 데 활용하겠습니다.
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer id="site-footer"></footer>
+
+<div id="toast">복사되었습니다 ✓</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script>initSessionPage(1);</script>
+
+</body>
+</html>

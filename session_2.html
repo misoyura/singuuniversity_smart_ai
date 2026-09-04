@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2차시 · AI 이미지 생성과 실습 · 똑똑한 AI 활용법 A to Z</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="page-session">
+
+<div class="statusbar"></div>
+
+<header class="header">
+  <div class="wrap">
+    <span class="logo"></span>
+    <p class="eyebrow"></p>
+    <h1>AI 이미지 생성과 실습</h1>
+    <p class="subtitle">프롬프트 설계부터 GPT Image / Nanobanana 실습까지</p>
+    <span class="guide">💡 실습 프롬프트는 복사 버튼으로 붙여넣으세요</span>
+  </div>
+</header>
+
+<nav class="nav" id="site-nav"></nav>
+
+<main>
+  <div class="wrap">
+
+    <section class="card" id="flow">
+      <h2><span class="num">00</span>오늘의 흐름</h2>
+      <p class="lead">상상하는 사람에서, AI로 구현하는 사람으로 — 아래 4가지 순서로 오늘 수업을 진행합니다.</p>
+
+      <table class="table">
+        <thead><tr><th>순서</th><th>내용</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1</strong></td><td>AI 이미지 이해 — 생성형 AI 비교 · 이미지 생성 원리(GAN/Diffusion/멀티모달)</td></tr>
+          <tr><td><strong>2</strong></td><td>AI 이미지 프롬프트 — 기본구조 · 주제/구도/스타일/디테일 · 화면비율</td></tr>
+          <tr><td><strong>3</strong></td><td>GPT Image 2.0 핵심 특징과 실습 프롬프트</td></tr>
+          <tr><td><strong>4</strong></td><td>Nanobanana / 믹스보드 — 제미나이 나노바나나와 구글 믹스보드 실습</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box note">
+        <span class="box-title">📌 핵심 메시지</span>
+        문제를 정의하는 것은 사람, 실행을 도와주는 것은 AI입니다. 오늘은 그 실행 도구로 '이미지'를 다룹니다.
+      </div>
+    </section>
+
+    <section class="card" id="understand">
+      <h2><span class="num">01</span>AI 이미지 이해</h2>
+      <p class="lead">생성형 AI의 흐름과 이미지 생성 원리를 먼저 짚어봅니다.</p>
+
+      <h3>주요 이미지 생성 AI 비교</h3>
+      <table class="table">
+        <thead><tr><th>도구명</th><th>접근성</th><th>주요 특징</th></tr></thead>
+        <tbody>
+          <tr><td><strong>GPT Image 2.0</strong><br><span class="muted">(챗GPT)</span></td><td>챗GPT 계정, 무료 약 4~8장</td><td>자연어 해석 우수, 생성 전 구도·맥락을 추론하는 방식</td></tr>
+          <tr><td><strong>Nanobanana 2</strong><br><span class="muted">(제미나이)</span></td><td>제미나이 계정, 무료 약 20장</td><td>속도·비용 최적화, 실시간 웹 검색 연동이 강점</td></tr>
+          <tr><td><strong>Midjourney V7</strong></td><td>무료 플랜 없음, 디스코드/웹</td><td>예술적·영화적 완성도의 표준, 컨셉 아트에 강함</td></tr>
+          <tr><td><strong>Stable Diffusion</strong></td><td>로컬·웹, 무료 플랜 없음</td><td>오픈소스, 로컬 기반 — 복잡한 사용 구조</td></tr>
+        </tbody>
+      </table>
+
+      <h3>이미지 생성 AI의 흐름</h3>
+      <table class="table">
+        <thead><tr><th>과정</th><th>특징</th><th>예시</th></tr></thead>
+        <tbody>
+          <tr><td><strong>머신러닝</strong></td><td>사람이 규칙을 직접 설계, 특징 추출</td><td>스팸 필터, 초기 얼굴 인식</td></tr>
+          <tr><td><strong>딥러닝</strong></td><td>데이터에서 특징을 자동 학습(CNN/RNN 등장)</td><td>음성인식, 스마트렌즈 초기 버전</td></tr>
+          <tr><td><strong>GAN</strong></td><td>진짜 같은 이미지를 생성하는 첫 단계, 스타일 변환·합성</td><td>딥페이크, FaceApp</td></tr>
+          <tr><td><strong>Diffusion</strong></td><td>노이즈 제거 방식 이미지 생성</td><td>미드저니, 스테이블 디퓨전, DALL-E</td></tr>
+          <tr><td><strong>멀티모달</strong></td><td>언어모델의 '세상 지식과 추론력'이 이미지 생성에 그대로 연결</td><td>나노바나나, GPT-Image</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box note">
+        <span class="box-title">📌 GAN 모델</span>
+        생성자(Generator) vs 판별자(Discriminator) — 생성자가 만든 가짜 이미지를 판별자가 진짜와 구분하며, 두 신경망이 서로 경쟁하듯 학습해 점점 더 정교한 이미지를 만들어냅니다.
+      </div>
+
+      <div class="box note">
+        <span class="box-title">📌 Diffusion 모델</span>
+        노이즈(잡음)를 입힌 이미지에서 거꾸로 노이즈를 제거해 나가며 원하는 이미지를 점진적으로 복원하는 방식입니다. (원본 → 조금씩 흐리게 → 완전한 잡음 → 거꾸로 복원)
+      </div>
+
+      <div class="box tip">
+        <span class="box-title">💡 멀티모달 통합형 모델</span>
+        GPT-Image, Nanobanana — 언어모델의 지식과 추론력이 이미지 생성에 그대로 연결되는 최신 방식입니다.
+      </div>
+    </section>
+
+    <section class="card" id="prompt">
+      <h2><span class="num">02</span>AI 이미지 프롬프트</h2>
+      <p class="lead">좋은 프롬프트를 설계하는 방법을 알아봅니다.</p>
+
+      <h3>프롬프트 입력방식 비교 — 최신 방식</h3>
+      <table class="table">
+        <thead><tr><th>방식</th><th>설명</th></tr></thead>
+        <tbody>
+          <tr><td><strong>기존 방식</strong></td><td>파라미터를 따로 명시 (-- 방식은 미드저니 방식)</td></tr>
+          <tr><td><strong>최신 방식</strong></td><td>일반적인 자연어 설명 방식 — 파라미터도 문장으로 풀어서 설명</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box note">
+        <span class="box-title">📌 예시 (최신 방식)</span>
+        "한국의 조용한 골목길에 복슬복슬한 치즈 고양이가 앉아 있는 모습을 사실적인 사진 스타일로 생성해 주세요. 따뜻한 노을빛이 고양이의 털을 부드럽게 비추고, 맑고 반짝이는 눈과 섬세한 털 질감이 잘 표현되도록 해주세요. 영화 같은 구도와 85mm 카메라로 촬영한 듯한 얕은 심도를 적용하고, 배경은 자연스럽게 흐려져 고양이가 돋보이도록 해주세요. 세로 3:4 비율의 초고해상도 이미지로 만들어 주세요."
+      </div>
+
+      <h3>이미지 생성 도구 종류</h3>
+      <table class="table">
+        <thead><tr><th>유형</th><th>도구</th><th>특징</th></tr></thead>
+        <tbody>
+          <tr><td><strong>대화형 통합</strong></td><td>ChatGPT · Gemini</td><td>대화하며 그림까지 — 입문 강의의 첫 도구로 알맞음</td></tr>
+          <tr><td><strong>전문 생성</strong></td><td>Midjourney · Firefly</td><td>높은 완성도와 스타일 — 디자인·홍보 실무에 강함</td></tr>
+          <tr><td><strong>기존 사진 수정</strong></td><td>Canva · Clipdrop</td><td>배경 교체·확장·편집·합성 — 가장 쉬운 UI</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box tip">
+        <span class="box-title">💡 이미지 생성 AI 선택 시 고려사항</span>
+        한국어 지원 여부 · 프롬프트 작성 난이도 · 생성 속도와 품질 · 가격 정책 · 레퍼런스 이미지 활용 가능성 · 브랜드 톤앤매너 유지 능력
+      </div>
+
+      <h3>이미지 프롬프트 기본구조 — 4단계</h3>
+      <table class="table">
+        <thead><tr><th>단계</th><th>질문</th><th>내용</th></tr></thead>
+        <tbody>
+          <tr><td><strong>① 주제</strong></td><td>무엇을 그릴 것인가?</td><td>이미지의 핵심(누구·무엇). 주인공·사물·배경·행동을 구체적으로 묘사</td></tr>
+          <tr><td><strong>② 구도와 조명</strong></td><td>어떻게 찍을 것인가?</td><td>카메라 시점(클로즈업·조감도 등), 조명(노을·네온 등 빛의 연출)</td></tr>
+          <tr><td><strong>③ 스타일</strong></td><td>어떤 화풍으로 그릴 것인가?</td><td>실사 사진 / 3D 애니메이션 / 2D 애니메이션 / 유화 등</td></tr>
+          <tr><td><strong>④ 디테일</strong></td><td>어떻게 완성할 것인가?</td><td>색감·질감·심도, 8k 해상도 등 품질 설정</td></tr>
+        </tbody>
+      </table>
+
+      <h3>실습 1 · 4단계 누적 프롬프트 만들어보기</h3>
+      <p class="lead">같은 인물에 한 단계씩 요소를 더해가며 이미지가 어떻게 완성되는지 직접 확인해보세요.</p>
+
+      <div class="prompt">
+        <div class="prompt-head"><span class="label">1단계 · 주제</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
+        <pre>사무실 책상 앞에 앉아 모니터를 보며 당황한 표정을 짓는
+40대 한국인 여성 직장인을 그려줘.</pre>
+      </div>
+
+      <div class="prompt">
+        <div class="prompt-head"><span class="label">2단계 · 주제 + 구도</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
+        <pre>상반신만 보이는 미디엄 사무실 책상 앞에 앉아 모니터를 보며
+당황한 표정을 짓는 40대 한국인 여성 직장인을 그려줘. 사이드 앵글</pre>
+      </div>
+
+      <div class="prompt">
+        <div class="prompt-head"><span class="label">3단계 · 주제 + 구도 + 스타일</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
+        <pre>사무실 책상 앞에 앉아 모니터를 보며 당황한 표정을 짓는
+40대 한국인 여성 직장인을 그려줘. 사이드 앵글, 시네마틱 스타일</pre>
+      </div>
+
+      <div class="prompt">
+        <div class="prompt-head"><span class="label">4단계 · 최종 완성 (주제+구도+스타일+디테일)</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
+        <pre>사무실 책상 앞에 앉아 모니터를 보며 당황한 표정을 짓는
+40대 한국인 여성 직장인을 그려줘. 사이드 앵글, 시네마틱 스타일,
+얕은 심도로 인물만 강조, 고립감 표현</pre>
+      </div>
+
+      <div class="box tip">
+        <span class="box-title">💡 스타일 명령어 모음</span>
+        실사 사진: DSLR photo, ultra realistic, 35mm lens, documentary photo style · 3D 애니메이션: 3D render, Pixar-style, cute 3D animation · 2D 애니메이션: anime style, Ghibli-inspired, hand-drawn look · 회화/미술: oil painting, watercolor, sketch, impressionism
+      </div>
+
+      <h3>화면 비율(종횡비) 고르기</h3>
+      <table class="table">
+        <thead><tr><th>비율</th><th>형태</th><th>사용하는 곳</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1:1</strong></td><td>정사각형</td><td>프로필 이미지, 제품 이미지, 카드뉴스</td></tr>
+          <tr><td><strong>4:5 / 3:4</strong></td><td>세로형</td><td>인스타그램 피드, 인물사진, 포스터</td></tr>
+          <tr><td><strong>9:16</strong></td><td>스마트폰 세로</td><td>유튜브 쇼츠, 인스타그램 릴스, 틱톡</td></tr>
+          <tr><td><strong>16:9</strong></td><td>와이드 가로형</td><td>PPT, 유튜브 영상·썸네일, 강의자료</td></tr>
+          <tr><td><strong>21:9</strong></td><td>초광각 가로형</td><td>영화 장면, 시네마틱 이미지, 홈페이지 와이드 배너</td></tr>
+        </tbody>
+      </table>
+
+      <h3>실습 2 · 화면 비율 지정하기</h3>
+      <div class="prompt">
+        <div class="prompt-head"><span class="label">화면 비율 적용 프롬프트</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
+        <pre>첨부된 사진을 21:9 비율로 생성해줘</pre>
+      </div>
+    </section>
+
+    <section class="card" id="gptimage">
+      <h2><span class="num">03</span>GPT Image 2.0 핵심 특징과 실습</h2>
+      <p class="lead">업계 최초 '추론(Thinking)' 내장 이미지 모델 — 생성 전에 스스로 구조를 계획하고 검증합니다.</p>
+
+      <table class="table">
+        <thead><tr><th>특징</th><th>내용</th></tr></thead>
+        <tbody>
+          <tr><td><strong>추론(Thinking) 내장</strong></td><td>생성 전에 스스로 구조를 계획 및 검증, 텍스트 렌더링 정확도 대폭 향상</td></tr>
+          <tr><td><strong>웹검색 연동</strong></td><td>실시간 사실 확인 후 이미지 생성 가능</td></tr>
+          <tr><td><strong>공간관계와 논리 이해</strong></td><td>사물의 배치, 위치 관계를 정확히 반영</td></tr>
+          <tr><td><strong>캐릭터 일관성</strong></td><td>여러 컷에서 동일 인물의 얼굴·복장을 유지</td></tr>
+          <tr><td><strong>기존 이미지 편집</strong></td><td>원본 인물의 동일성은 유지하면서 구도·자세·의상을 새로 생성</td></tr>
+          <tr><td><strong>상식과 문맥 이해</strong></td><td>시대·상황에 맞는 사실적 표현 + 유머러스한 재해석</td></tr>
+          <tr><td><strong>텍스트 렌더링</strong></td><td>인포그래픽 등 이미지 안 문구를 정확하게 표현</td></tr>
+          <tr><td><strong>이미지 분할 생성</strong></td><td>단계별 설명을 여러 장의 이미지로 나눠 생성</td></tr>
+        </tbody>
+      </table>
+
+      <h3>실습 3 · 공간관계와 논리 이해</h3>
+      <div class="prompt">
+        <div class="prompt-head"><span class="label">배치 지정 프롬프트</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
+        <pre>책상 위에 노트북, 커피잔, 화분이 있는 사무실 사진.
+노트북은 왼쪽, 커피잔은 노트북 오른쪽 뒤, 화분은 오른쪽 끝에 배치.
+커피잔 옆에는 '월요일도 화이팅'이라고 적힌 메모지를 놓아줘.</pre>
+      </div>
+
+      <h3>실습 4 · 캐릭터 일관성 (웹툰 4컷)</h3>
+      <div class="prompt">
+        <div class="prompt-head"><span class="label">동일 인물 4컷 프롬프트</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
+        <pre>웹툰형 4컷 이미지로 만들어줘. 주인공은 둥근 안경, 짧은 검은 머리,
+파란색 넥타이, 회색 정장을 입은 30대 한국인 남성 공무원 김대리야.
+네 장면 모두 동일 인물로 유지해줘.
+
+1컷: 출근하며 자신감 있게 사무실 문을 연다.
+2컷: 책상 위 산더미 같은 서류를 보고 얼어붙는다.
+3컷: 생성형 AI를 사용해 서류를 빠르게 정리한다.
+4컷: 정시에 퇴근하며 뒤쪽 동료들에게 손을 흔든다.
+
+각 컷에서 얼굴, 안경, 헤어스타일, 넥타이와 정장 색상을 동일하게 유지해줘.</pre>
+      </div>
+
+      <h3>실습 5 · 상식과 문맥 이해</h3>
+      <div class="prompt">
+        <div class="prompt-head"><span class="label">시대·상황 재해석 프롬프트</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
+        <pre>조선시대 관아에서 운영하는 스마트 민원실을 영화 스틸컷처럼
+사실적으로 만들어줘. 한복을 입은 백성이 나무로 된 번호표
+발급기에서 번호표를 뽑고, 갓을 쓴 관리가 붓 대신 태블릿으로
+민원을 처리하고 있어. 벽에는 한지로 만든 대형 전광판이 있고,
+전광판에는 "대기번호 21번"이라고 적혀 있어. 구석에는 작은
+로봇이 두루마리 문서를 자동으로 분류하고, 밖에는 말 대신
+전기 가마가 충전 중이야. 조선시대 건축, 의복, 가구는
+사실적으로 표현하되, 현대 기술은 조선시대 재료로 재해석해줘.
+유머러스하지만 고급스럽고 영화적인 분위기, 16:9.</pre>
+      </div>
+
+      <h3>실습 6 · 텍스트 렌더링 (인포그래픽)</h3>
+      <div class="prompt">
+        <div class="prompt-head"><span class="label">인포그래픽 프롬프트</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
+        <pre>폭염에 대비하기 위한 안전수칙을 안내해주는 인포그래픽
+이미지를 생성해줘. 관공서에 붙일 이미지야.</pre>
+      </div>
+
+      <h3>실습 7 · 이미지 분할 생성</h3>
+      <div class="prompt">
+        <div class="prompt-head"><span class="label">단계별 이미지 생성 프롬프트</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
+        <pre>카페 키오스크 사용법을 알려주는 이미지를 단계별로 해서
+4단계의 이미지로 각각 생성해줘.</pre>
+      </div>
+
+      <div class="box tip">
+        <span class="box-title">💡 참고 — 부분 수정도 가능합니다</span>
+        완성된 이미지를 두고 "왼쪽에 서있는 사람을 없애주고, 오른쪽에 번호표를 들고 초조해하는 모습을 그려줘"처럼 결과물 일부만 이어서 수정 요청할 수 있습니다.
+      </div>
+    </section>
+
+    <section class="card" id="nanobanana">
+      <h2><span class="num">04</span>Nanobanana / 구글 믹스보드</h2>
+      <p class="lead">제미나이 나노바나나와 구글 믹스보드로 실습합니다.</p>
+
+      <table class="table">
+        <thead><tr><th>비교</th><th>GPT Image 2.0</th><th>Nanobanana 2</th></tr></thead>
+        <tbody>
+          <tr><td><strong>생성 속도</strong></td><td>정교한 추론 과정을 거쳐 상대적으로 느린 편</td><td>속도·비용 최적화에 강점 — 체감 속도가 빠름</td></tr>
+          <tr><td><strong>실시간 웹 검색</strong></td><td>지원</td><td>지원 — 최신 정보 반영에 강점</td></tr>
+        </tbody>
+      </table>
+
+      <h3>실습 8 · Nanobanana 이미지 생성</h3>
+      <div class="prompt">
+        <div class="prompt-head"><span class="label">공간 배치 프롬프트</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
+        <pre>초현실적인 현대 사무실. 창문은 왼쪽 벽에 있다.
+책상은 창문을 바라보고 있다. 책상 위에는 노트북,
+오른쪽에는 커피잔, 왼쪽에는 스마트폰. 책상 뒤에는
+화이트보드에 프로젝트 일정. 오른쪽에는 화분, 왼쪽에는 프린터.
+카메라는 사무실 입구에서 바라본 시점. 극사실주의, 16:9</pre>
+      </div>
+
+      <h3>구글 믹스보드 작동 방식</h3>
+      <p class="lead">① 아이디어 구상(Mixboard) → ② 이미지 제작(ChatGPT/Nano Banana) → ③ 시안 비교(Mixboard) → ④ 최종 자료(PPT/Canva)</p>
+
+      <h3>실습 9 · 믹스보드로 여러 시안 만들기</h3>
+      <div class="prompt">
+        <div class="prompt-head"><span class="label">기본 이미지 프롬프트</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
+        <pre>하늘색 단색 배경, 얌전히 앉아있는 노란색 계열의
+코리아숏헤어 고양이, 극사실주의 사진</pre>
+      </div>
+
+      <div class="prompt">
+        <div class="prompt-head"><span class="label">스타일 변경 · 시안 여러 개 생성</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
+        <pre>이 이미지를 귀여운 3D 애니메이션 스타일 캐릭터로 변경해줘.
+시안 5개 생성해줘.</pre>
+      </div>
+
+      <div class="prompt">
+        <div class="prompt-head"><span class="label">두 이미지 조합하기</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
+        <pre>1번의 실사 고양이를 2번의 귀여운 3D 애니메이션 캐릭터
+스타일로 바꿔줘. 뒷배경 색깔은 초록색으로 해줘</pre>
+      </div>
+
+      <div class="box note">
+        <span class="box-title">📌 믹스보드 사용법</span>
+        확대/축소는 마우스 휠, 캔버스 이동은 스페이스바+마우스 좌클릭. 이미지 복수 선택은 마우스 드래그, Ctrl+클릭, Alt+클릭. 원치 않는 결과물은 Backspace/Delete로 바로 삭제할 수 있습니다.
+      </div>
+    </section>
+
+    <section class="card" id="wrap">
+      <h2><span class="num">05</span>마무리</h2>
+      <p class="lead">상상하는 사람에서, AI로 구현하는 사람으로.</p>
+
+      <div class="box tip">
+        <span class="box-title">💡 오늘 배운 순서</span>
+        프롬프트 설계 → GPT Image → Nano Banana 실습까지. 오늘 배운 방법을 활용해 '원하는 이미지를 직접 설계하는 사람'이 되어보세요.
+      </div>
+
+      <ol class="steps">
+        <li><b>주제</b><span>무엇을 그릴 것인가</span></li>
+        <li><b>구도와 조명</b><span>어떻게 찍을 것인가</span></li>
+        <li><b>스타일</b><span>어떤 화풍으로 그릴 것인가</span></li>
+        <li><b>디테일</b><span>어떻게 완성할 것인가</span></li>
+        <li><b>화면 비율</b><span>어디에 쓸 이미지인가</span></li>
+      </ol>
+    </section>
+
+  </div>
+</main>
+
+<footer id="site-footer"></footer>
+
+<div id="toast">복사되었습니다 ✓</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script>initSessionPage(2);</script>
+
+</body>
+</html>
