@@ -88,3 +88,17 @@ const SESSIONS = [
     ],
   },
 ];
+
+// 강의 자료 다운로드 목록 (메인 페이지 "강의 자료 다운로드" 섹션에서 자동 렌더링됨).
+// 새 차시 자료가 생기면 이 배열에 그룹을 하나 추가하세요.
+// href는 이 사이트 파일들과 같은 위치에 올려둔 실제 파일 경로입니다 (files/session_N/ 폴더 기준).
+const DOWNLOADS = [
+  {
+    session: 1,
+    label: "1차시 자료",
+    files: [
+      { name: "지자체 청년정책 대표사례 모음집 (PDF)", href: "files/session_1/1차시_2025년_지자체_청년정책_대표사례_모음집.pdf", size: "5.6MB" },
+      { name: "동추원 만세력 (PDF)", href: "files/session_1/1차시_동추원만세력.pdf", size: "2.6MB" },
+    ],
+  },
+];
