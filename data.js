@@ -97,8 +97,8 @@ const DOWNLOADS = [
     session: 1,
     label: "1차시 자료",
     files: [
-      { name: "지자체 청년정책 대표사례 모음집 (PDF)", href: "files/session_1/1차시_2025년_지자체_청년정책_대표사례_모음집.pdf", size: "5.6MB" },
-      { name: "동추원 만세력 (PDF)", href: "files/session_1/1차시_동추원만세력.pdf", size: "2.6MB" },
+      { name: "지자체 청년정책 대표사례 모음집 (PDF)", href: "1차시_2025년_지자체_청년정책_대표사례_모음집.pdf", size: "5.6MB" },
+      { name: "동추원 만세력 (PDF)", href: "1차시_동추원만세력.pdf", size: "2.6MB" },
     ],
   },
 ];
