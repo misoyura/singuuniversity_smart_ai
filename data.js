@@ -23,6 +23,7 @@ const SESSIONS = [
       { href: "#compare", label: "3종 비교" },
       { href: "#gemini", label: "Gemini 활용" },
       { href: "#gem", label: "GEM 활용" },
+      { href: "#research", label: "Gemini 실습" },
       { href: "#wrap", label: "마무리" },
     ],
   },
