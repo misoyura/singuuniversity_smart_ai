@@ -7,7 +7,7 @@
 }
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{margin:0;font-family:"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased;}
+body{margin:0;font-family:"HY헤드라인M","HY Headline M","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased;}
 .wrap{max-width:920px;margin:0 auto;padding:0 20px;}
 .statusbar{height:4px;background:linear-gradient(90deg,var(--brand),var(--brand-dark));}
 
