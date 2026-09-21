@@ -54,6 +54,7 @@ const SESSIONS = [
       { href: "#googleflow", label: "Flow" },
       { href: "#vstory", label: "vStory" },
       { href: "#suno", label: "SUNO" },
+      { href: "#astra", label: "GPT-6 Astra" },
       { href: "#wrap", label: "마무리" },
     ],
   },
