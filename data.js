@@ -103,4 +103,18 @@ const DOWNLOADS = [
       { name: "동추원 만세력 (PDF)", href: "1차시_동추원만세력.pdf", size: "2.6MB" },
     ],
   },
+  // 용량이 커서 저장소에 직접 올릴 수 없는 자료는 구글 드라이브 등의 공유 링크(https://...)를 href에 넣으세요.
+  // href를 비워두면 '링크 준비중'으로 표시됩니다.
+  {
+    session: 4,
+    label: "4차시 NotebookLM 실습자료",
+    files: [
+      { name: "① 2020년 지자체 청년정책 우수사례 모음집 (PDF)", href: "https://drive.google.com/drive/folders/1rmFKouujMpNwH19TtzKdTRcQIhHzrBTp", size: "26.9MB" },
+      { name: "② 2020 지자체 청년정책 우수사례 모음집 (PDF)", href: "https://drive.google.com/drive/folders/1rmFKouujMpNwH19TtzKdTRcQIhHzrBTp", size: "35.5MB" },
+      { name: "③ 2021년 지자체 청년정책 우수사례 모음집 (PDF)", href: "https://drive.google.com/drive/folders/1rmFKouujMpNwH19TtzKdTRcQIhHzrBTp", size: "44.8MB" },
+      { name: "④ 2023 민원제도개선 우수사례집 · 광주다움 통합돌봄 (PDF)", href: "https://drive.google.com/drive/folders/1rmFKouujMpNwH19TtzKdTRcQIhHzrBTp", size: "27.5MB" },
+      { name: "④-보조 2024 광주다움 통합돌봄 사례집 (PDF)", href: "https://drive.google.com/drive/folders/1rmFKouujMpNwH19TtzKdTRcQIhHzrBTp", size: "104.1MB" },
+      { name: "⑤ 2023 적극행정 우수사례집 (PDF)", href: "https://drive.google.com/drive/folders/1rmFKouujMpNwH19TtzKdTRcQIhHzrBTp", size: "22.7MB" },
+    ],
+  },
 ];

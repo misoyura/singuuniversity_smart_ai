@@ -90,11 +90,18 @@ function renderDownloads(){
     return;
   }
 
-  const rows = DOWNLOADS.flatMap(group => group.files.map(f => `
+  const rows = DOWNLOADS.flatMap(group => group.files.map(f => {
+    const btn = f.href
+      ? (/^https?:\/\//.test(f.href)
+          ? `<a class="dl-btn" href="${f.href}" target="_blank" rel="noopener">다운로드</a>`
+          : `<a class="dl-btn" href="${encodeURI(f.href)}" download>다운로드</a>`)
+      : `<a class="dl-btn disabled" href="#">링크 준비중</a>`;
+    return `
     <div class="dl-row">
       <span class="fname">${group.label} · ${f.name}<span class="fmeta">${f.size}</span></span>
-      <a class="dl-btn" href="${encodeURI(f.href)}" download>다운로드</a>
-    </div>`)).join('');
+      ${btn}
+    </div>`;
+  })).join('');
 
   container.innerHTML = `<div class="dl-group">${rows}</div>`;
 }
