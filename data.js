@@ -62,7 +62,7 @@ const SESSIONS = [
     id: 4,
     title: "생성형AI 산업활용 및 학교홍보 콘텐츠 제작",
     subtitle: "생성형 AI로 우리 학교를 홍보한다면? 오늘 만든 기획이 다음 차시의 영상이 됩니다",
-    desc: "산업별 AI 활용 사례부터 NotebookLM으로 학교 자료 분석하기, 홍보 포인트 도출과 60초 스토리보드 설계까지.",
+    desc: "산업별 AI 활용 사례부터 NotebookLM으로 학교 자료 분석하기, 홍보 포인트 도출부터 Google Flow 영상 제작·CapCut 편집까지.",
     href: "session_4.html",
     anchors: [
       { href: "#flow", label: "오늘의 흐름" },
@@ -70,7 +70,7 @@ const SESSIONS = [
       { href: "#notebooklm", label: "NotebookLM" },
       { href: "#simulation", label: "실습 따라하기" },
       { href: "#mission", label: "실습 미션" },
-      { href: "#storyboard", label: "스토리보드" },
+      { href: "#capcut", label: "CapCut 편집" },
       { href: "#wrap", label: "마무리" },
     ],
   },
