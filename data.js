@@ -78,7 +78,7 @@ const SESSIONS = [
     id: 5,
     title: "AI 윤리·규제와 바이브코딩",
     subtitle: "AI를 잘 만드는 것보다, 올바르게 만드는 것이 먼저다",
-    desc: "AI 윤리 5대 체크포인트와 대한민국 AI 기본법부터, 바이브코딩으로 AI 윤리 자가진단 웹앱을 직접 만드는 실습까지.",
+    desc: "AI 윤리 5대 체크포인트와 대한민국 AI 기본법 Q&A부터, 바이브코딩으로 AI 윤리 자가진단 웹앱과 미니게임을 직접 만드는 실습까지.",
     href: "session_5.html",
     anchors: [
       { href: "#flow", label: "오늘의 흐름" },

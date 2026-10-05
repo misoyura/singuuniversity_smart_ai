@@ -27,13 +27,24 @@
 
     <section class="card" id="flow">
       <h2><span class="num">00</span>오늘의 흐름</h2>
-      <p class="lead">"AI가 답했으니까 믿어도 될까요?" AI가 만든 뉴스·이미지·추천 결과, 그냥 믿어도 될까요?</p>
+      <p class="lead"><b>OPENING</b> — AI가 만든 결과라면 그냥 믿어도 될까?</p>
+
+      <table class="table">
+        <thead><tr><th>질문</th><th>생각해볼 점</th></tr></thead>
+        <tbody>
+          <tr><td><strong>AI가 만든 뉴스, 진짜일까?</strong></td><td>사실관계를 확인하지 않고 퍼뜨리면 어떻게 될까요?</td></tr>
+          <tr><td><strong>AI가 만든 이미지, 실제 사진일까?</strong></td><td>실제 인물처럼 보이는 이미지, 어떤 문제가 생길 수 있을까요?</td></tr>
+          <tr><td><strong>AI가 추천한 결과, 공정할까?</strong></td><td>AI의 판단 기준을 우리가 알 수 있을까요?</td></tr>
+        </tbody>
+      </table>
+      <p class="lead">"AI가 답했으니까 믿어도 될까요?"</p>
 
       <div class="box note">
-        <span class="box-title">📌 오늘의 질문</span>
-        AI에게 일을 맡기면 책임도 AI가 질까? 사람 → 아이디어 → 프롬프트 → AI → 결과물, 그 결과는 AI가 만들었지만 <b>선택과 책임은 사람에게 있습니다.</b>
+        <span class="box-title">📌 오늘의 질문 — AI에게 일을 맡기면 책임도 AI가 질까?</span>
+        사람 → 아이디어 → 프롬프트 → AI → 결과물, 그렇다면 <b>누가 책임지는가?</b> 결과는 AI가 만들었지만, 선택과 책임은 사람에게 있습니다.
       </div>
 
+      <h3>TODAY'S ROADMAP · 오늘 무엇을 배우는가?</h3>
       <table class="table">
         <thead><tr><th>순서</th><th>내용</th></tr></thead>
         <tbody>
@@ -59,10 +70,12 @@
         </tbody>
       </table>
 
+      <h3>AI가 항상 공정할까? — AI도 편향될 수 있다</h3>
+      <p class="lead">AI에게 학습된 데이터 → AI의 판단. <b>Garbage In → Garbage Out</b></p>
       <div class="box warn">
-        <span class="box-title">⚠ AI도 편향될 수 있다 — Garbage In → Garbage Out</span>
-        <b>사례: 스캐터랩 AI 챗봇 '이루다' 논란 (2020.12~2021.01)</b><br>
-        카카오톡 대화 데이터를 학습해 만든 챗봇 '이루다'가 서비스 3주 만에 성소수자·장애인 등에 대한 차별·혐오 발언을 하고, 실제 이용자의 개인정보가 노출될 위험이 드러나 서비스가 중단된 사례입니다. 데이터 편향과 개인정보 처리 문제가 동시에 불거진 국내 대표 사례로 다수 언론에 보도되었습니다.
+        <span class="box-title">⚠ CASE · 스캐터랩 AI 챗봇 '이루다' 논란 (2020.12~2021.01)</span>
+        카카오톡 대화 데이터를 학습해 만든 챗봇 '이루다'가 서비스 3주 만에 성소수자·장애인 등에 대한 차별·혐오 발언을 하고, 실제 이용자의 개인정보가 노출될 위험이 드러나 서비스가 중단된 사례입니다. 데이터 편향과 개인정보 처리 문제가 동시에 불거진 국내 대표 사례로 다수 언론에 보도되었습니다.<br>
+        <span class="muted">이루다 1.0은 개인정보 침해 문제로 서비스가 중단되었고, 2.0이 현재 서비스 중입니다.</span>
       </div>
 
       <h3>AI 윤리에서 꼭 확인할 5가지</h3>
@@ -81,25 +94,97 @@
         이 5가지는 뒤의 실습에서 만드는 'AI 윤리 자가진단 웹앱'의 체크리스트로 그대로 이어집니다.
       </div>
 
-      <h3>CASE STUDY · 이 AI, 사용해도 될까?</h3>
-      <p class="lead">대학에서 AI를 이용해 학생들의 진로를 추천하려고 합니다. 입력 데이터: 성적·출결·자기소개서·상담 내용·이름</p>
-      <div class="box note">
-        <span class="box-title">📌 생각해볼 질문</span>
-        ① 개인정보 문제는? ② AI 판단을 그대로 믿어도 될까? ③ 학생에게 AI 사용 사실을 알려야 할까?
-      </div>
+      <h3>AI 사회적 이슈 사례</h3>
+      <table class="table">
+        <thead><tr><th>구분</th><th>사례 (뉴스 영상)</th></tr></thead>
+        <tbody>
+          <tr><td><strong>AI 순기능</strong></td><td>[연합뉴스] 광복 80주년 — 흑백사진에서 걸어나온 독립영웅들 "환하게 웃는 모습에 눈물이…"</td></tr>
+          <tr><td><strong>사례 1 · 딥페이크 위험</strong></td><td>[ET] 진짜보다 더 진짜같은 가짜, 당신 노리는 '딥페이크'</td></tr>
+          <tr><td><strong>사례 2 · AI와 상호작용 위험</strong></td><td>[SBS 8뉴스] AI와 6주 대화 후 극단선택 — "통제기술 없다" 섬뜩 경고</td></tr>
+          <tr><td><strong>사례 3 · 개인정보 유출</strong></td><td>[인문] 챗GPT에게 털어놓은 이야기, 어디까지 안전할까?</td></tr>
+        </tbody>
+      </table>
+
+      <h3>밸런스 게임 · AI 유형별 윤리적 문제</h3>
+      <p class="lead">두 입장 중 내 생각에 가까운 쪽을 골라 보고, 이유를 이야기해 봅니다.</p>
+      <table class="table">
+        <thead><tr><th>주제</th><th>입장 A</th><th>VS</th><th>입장 B</th></tr></thead>
+        <tbody>
+          <tr><td><strong>AI와 감정</strong></td><td>인간 대체 우려 때문에 감정적 관계는 금물!</td><td>VS</td><td>외로울 때 AI 친구처럼 마음껏 사용!</td></tr>
+          <tr><td><strong>① 텍스트 생성형 AI</strong><br><span class="muted">ChatGPT, Claude 등</span></td><td>숙제·보고서 작성 → AI 자유롭게 활용!</td><td>VS</td><td>학습·연구 신뢰 위해 제한적으로만 활용!</td></tr>
+          <tr><td><strong>② 이미지 생성형 AI</strong><br><span class="muted">Midjourney, DALL·E 등</span></td><td>누구든 원하는 그림 마음대로 생성 가능해야 한다!</td><td>VS</td><td>저작권·작가 권리 보호 위해 사용 제한 필요</td></tr>
+          <tr><td><strong>③ 영상 생성형 AI</strong><br><span class="muted">Runway, Pika Labs 등</span></td><td>AI 영상은 창작의 자유, 검열 NO!</td><td>VS</td><td>딥페이크 범죄 막기 위해 강력 규제!</td></tr>
+          <tr><td><strong>④ 오디오/음성 생성형 AI</strong><br><span class="muted">ElevenLabs 등</span></td><td>보이스피싱 위험 커서 허가제 필요</td><td>VS</td><td>목소리 복제 자유 → 성우·유튜버 모두 활용 가능</td></tr>
+          <tr><td><strong>⑤ 코드 생성형 AI</strong><br><span class="muted">Copilot 등</span></td><td>보안 구멍·악성코드 위험 크니 제한!</td><td>VS</td><td>초보자도 AI 덕분에 개발 자유롭게!</td></tr>
+          <tr><td><strong>⑥ 멀티모달 AI</strong><br><span class="muted">GPT-4o, Gemini 등</span></td><td>개인정보 결합 위험 커서 국가 차원 관리 필요!</td><td>VS</td><td>텍스트·영상·이미지 다 다루니 생활 혁신!</td></tr>
+        </tbody>
+      </table>
     </section>
 
     <section class="card" id="regulation">
       <h2><span class="num">02</span>AI 규제</h2>
-      <p class="lead">AI 기술 → 사회적 영향 → 윤리적 문제 → 법·제도. AI가 사회에 미치는 영향이 커질수록 윤리만으로는 부족해집니다.</p>
+      <p class="lead">AI 관련 정책 — 정책은 왜 필요할까요?</p>
 
       <div class="box note">
+        <span class="box-title">📌 정책의 필요성 · 사례</span>
+        [KBS 뉴스] 미 백악관 'AI 정책' 첫 발표 — "'AI가 제작' 표시 의무화"
+      </div>
+
+      <h3>AI는 법의 영역으로 들어왔다</h3>
+      <p class="lead">AI 기술 → 사회적 영향 → 윤리적 문제 → 법·제도. AI가 사회에 미치는 영향이 커질수록 윤리만으로는 부족해집니다.</p>
+      <div class="box note">
         <span class="box-title">📌 윤리 vs 규제</span>
-        윤리는 지키면 좋은 것, 규제는 안 지키면 제재받는 것입니다.
+        윤리는 지키면 좋은 것, 규제는 안 지키면 제재받는 것입니다. 다음 장에서 이어집니다.
       </div>
 
       <h3>대한민국 AI 기본법</h3>
-      <p class="lead">「인공지능 발전과 신뢰 기반 조성 등에 관한 기본법」 — 2026.01.22 시행 (AI 발전과 국민 권익 보호 사이의 신뢰 기반 조성). ※ 시행일 등 세부 내용은 국가법령정보센터(law.go.kr) 원문 대조 후 사용해 주세요.</p>
+      <p class="lead">「인공지능 발전과 신뢰 기반 조성 등에 관한 기본법」 — 2026.01.22 시행 (AI 발전 · 신뢰 기반 · 국민 권익 보호 → AI 기본법). ※ 시행일 등 세부 내용은 국가법령정보센터(law.go.kr) 원문 대조 후 사용해 주세요.</p>
+
+      <h3>AI 기본법 Q&amp;A — 핵심만 간단하게 알아보는 인공지능기본법</h3>
+      <p class="muted">출처: 과학기술정보통신부 카드뉴스 (7문항)</p>
+      <table class="table">
+        <thead><tr><th>질문</th><th>답변</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>1. 인공지능기본법 적용 대상은 누구인가요?</strong></td>
+            <td>'인공지능사업자'입니다.<br>
+              <b>인공지능개발사업자</b> — AI를 개발·제공하는 자 (예: OpenAI(GPT-5.2), Google(Gemini 3.0), NAVER(HyperCLOVA X THINK/SEED/OMNI))<br>
+              <b>인공지능이용사업자</b> — 개발된 AI를 이용해 제품·서비스를 제공하는 자 (예: 자율주행 자동차, 생성형 AI 서비스, 컨텐츠 추천 AI 서비스)<br>
+              ※ 인공지능개발사업자가 직접 AI 제품/서비스를 이용자에게 제공하는 경우 인공지능이용사업자에도 해당할 수 있습니다.</td>
+          </tr>
+          <tr>
+            <td><strong>2. 표시 의무는 누가 지켜야 하나요?</strong></td>
+            <td>'인공지능사업자'입니다. 이용자에겐 의무가 없습니다.<br>
+              <b>투명성 확보 의무 있음</b> — 인공지능개발사업자(예: Gemini · Nano Banana): 기반 모델 개발/제공 · 인공지능이용사업자(예: carat): 모델을 이용하여 AI 서비스 제공<br>
+              <b>투명성 확보 의무 없음</b> — 이용자(예: 방송사·유튜버): 생성된 콘텐츠 활용 및 방영 · 시청자·소비자: 콘텐츠 소비 및 시청</td>
+          </tr>
+          <tr>
+            <td><strong>3. 인공지능사업자가 아니면 모든 책임에서 자유롭나요?</strong></td>
+            <td>인공지능기본법상 책임만 면제일 뿐, <b>다른 법률은 준수해야 합니다</b> (정보통신망법, 공직선거법, 청소년성보호법, 표시광고법 등).<br>
+              예시: 생성형 AI로 제작한 명예훼손 가능성이 있는 영상 유포 = 정보통신망법 위반에 따른 형사상 책임 발생 가능 · 생성형 AI로 제작한 기능 오인 가능성이 있는 광고 유포 = 표시광고법 위반에 따른 형사상 책임 발생 가능</td>
+          </tr>
+          <tr>
+            <td><strong>4. 유튜버나 개인 창작자도 대상인가요?</strong></td>
+            <td>AI 생성물을 활용하는 크리에이터는 인공지능기본법상 '이용자'로 <b>표시 의무가 없습니다.</b></td>
+          </tr>
+          <tr>
+            <td><strong>5. 분야별 표시 의무 예시를 좀 알려주세요</strong></td>
+            <td><b>방송·언론·출판</b> — 이미지/영상 생성 서비스를 제공하는 인공지능사업자는 의무 있음 (생성물을 이용하여 콘텐츠를 제작하는 방송사 등은 의무 없음)<br>
+              <b>콘텐츠·미디어</b> — 웹툰 제작 AI 서비스를 제공하는 인공지능사업자는 의무 있음 (이를 활용하는 웹툰 작가 등은 의무 없음)<br>
+              <b>교육·법률·의료·통번역</b> — 법률 지원 AI 서비스를 제공하는 인공지능사업자는 의무 있음 (이를 활용하는 법무법인 등은 의무 없음)<br>
+              <b>금융·행정·제조</b> — 업무 지원 AI 서비스를 제공하는 인공지능사업자는 의무 있음 (이를 활용하는 기관/기업 등은 의무 없음)</td>
+          </tr>
+          <tr>
+            <td><strong>6. 인공지능기본법을 위반하면 어떻게 되나요?</strong></td>
+            <td>사실조사 및 과태료 부과는 제도 안착을 위해 <b>1년 이상 유예</b>합니다 (2027. 1.). (유예기간은 1년 뒤 해외 동향과 기술 발전, 업계 준비 상황 등을 고려하여 추가 연장될 수 있습니다)</td>
+          </tr>
+          <tr>
+            <td><strong>7. 스타트업을 운영 중인데 법 관련 도움을 받을 수 있을까요?</strong></td>
+            <td><b>인공지능기본법 지원데스크</b> — 전화 080-850-2546 (평일 오전 9시 ~ 오후 6시) · sw.or.kr<br>
+              기업의 인공지능기본법 관련 문의와 애로사항에 대해 컨설팅을 제공합니다. + 스타트업·지역기업 대상 현장 설명회 개최 (수요에 따라 수시로 개최)</td>
+          </tr>
+        </tbody>
+      </table>
 
       <h3>AI 기본법에서 기억할 3가지</h3>
       <table class="table">
@@ -111,18 +196,20 @@
         </tbody>
       </table>
 
+      <h3>생성형 AI, 표시해야 할까?</h3>
+      <p class="lead">AI 이미지 · AI 영상 — "AI가 만든 것임을 알려야 할까?" (AI 생성 사실 고지·표시)</p>
       <div class="box tip">
         <span class="box-title">💡 생각해보기</span>
-        여러분이 과제 발표 자료에 AI로 만든 이미지를 쓴다면, "이건 AI가 만들었어요"라고 밝혀야 할까요?
+        "여러분이 과제 발표 자료에 AI로 만든 이미지를 쓴다면, '이건 AI가 만들었어요'라고 밝혀야 할까요?"
       </div>
 
-      <h3>고영향 AI란?</h3>
-      <p class="lead">"AI가 틀렸을 때 피해가 커지는가?"</p>
+      <h3>AI의 판단이 사람의 삶을 크게 바꾼다면?</h3>
+      <p class="lead">AI 채용 · 교육 · 의료 · 금융 · 복지 — "AI가 틀렸을 때 피해가 커지는가?"</p>
       <table class="table">
         <thead><tr><th>구분</th><th>내용</th></tr></thead>
         <tbody>
           <tr><td><strong>편의 기능</strong></td><td>예: 음악 추천 — 틀려도 다시 추천받으면 그만</td></tr>
-          <tr><td><strong>고영향 AI</strong></td><td>예: 채용·교육·의료·금융·복지 심사 — 틀리면 삶이 바뀔 수 있음</td></tr>
+          <tr><td><strong>고영향 AI</strong></td><td>예: 채용 심사 — 틀리면 삶이 바뀔 수 있음</td></tr>
         </tbody>
       </table>
 
@@ -137,7 +224,7 @@
       </table>
       <div class="box note">
         <span class="box-title">📌 핵심</span>
-        윤리는 방향을 제시하고, 규제는 최소한의 기준을 정합니다. 규제를 지켰다고 반드시 윤리적인 것은 아닙니다 — 윤리는 규제보다 더 높은 기준을 요구할 수 있습니다.
+        윤리는 방향을 제시하고, 규제는 최소한의 기준을 정한다. 규제를 지켰다고 반드시 윤리적인 것은 아닙니다 — 윤리는 규제보다 더 높은 기준을 요구할 수 있습니다.
       </div>
     </section>
 
@@ -151,6 +238,15 @@
       </div>
 
       <table class="table">
+        <thead><tr><th>도구</th><th>설명</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Gemini Canvas</strong></td><td>"쉽게 만들어서 바로 써보는 앱 제작 도구"</td></tr>
+          <tr><td><strong>Google AI Studio</strong></td><td>"앱을 실제로 개발·발전시키는 바이브 코딩 도구"</td></tr>
+        </tbody>
+      </table>
+
+      <h3>기존 코딩 vs Vibe Coding</h3>
+      <table class="table">
         <thead><tr><th>구분</th><th>기존 코딩</th><th>Vibe Coding</th></tr></thead>
         <tbody>
           <tr><td><strong>방식</strong></td><td>문법 학습 → 코드를 한 줄씩 작성</td><td>아이디어 → AI에게 설명, 한국어 한 문장만 입력</td></tr>
@@ -161,12 +257,49 @@
       </table>
       <div class="box tip">
         <span class="box-title">💡 핵심</span>
-        코딩 능력보다 요구사항을 설명하는 능력이 중요해집니다. 단, 결과물의 품질(보안·개인정보 처리 등)은 여전히 사람이 확인해야 합니다 — '몰라도 시작할 수 있다'는 뜻입니다.
+        코딩 능력보다 요구사항을 설명하는 능력이 중요해진다. 단, 결과물의 품질(보안·개인정보 처리 등)은 여전히 사람이 확인해야 합니다 — '몰라도 시작할 수 있다'는 뜻입니다.
+      </div>
+
+      <h3>같은 AI, 다른 경험! — 구글 AI 스튜디오 VS 제미나이 캔버스</h3>
+      <p class="lead">어떤 도구가 나에게 더 잘 맞을까요? 목적과 기능을 한눈에 비교해보세요!</p>
+      <table class="table">
+        <thead><tr><th>구분</th><th>Google AI Studio</th><th>Gemini Canvas (앱 모드)</th></tr></thead>
+        <tbody>
+          <tr><td><strong>한 줄 설명</strong></td><td>앱 개발·바이브 코딩에 최적화된 개발 환경. 자연어로 코드를 작성하고, 여러 파일을 관리하며 실제 웹앱을 개발하고 배포할 수 있는 강력한 플랫폼</td><td>쉽게 만들고 바로 써보는 콘텐츠/앱 제작에 특화</td></tr>
+          <tr><td><strong>주요 기능</strong></td><td>풀스택 웹앱 개발(React, Node.js 등) · 여러 파일/폴더로 프로젝트 관리 · Firebase, Cloud Run 등 백엔드 연동 · GitHub 연동 및 버전 관리 · API 연동 및 외부 서비스 활용 · 실제 배포까지 가능한 개발 환경</td><td>프롬프트만으로 앱, 문서, 코드, 슬라이드 등 제작 · 미리보기와 간단한 수정 가능 · 필요한 경우 Gemini가 자동으로 구성 · 콘텐츠 제작에 최적화된 다양한 템플릿 · 별도의 복잡한 설정 없이 빠른 프로토타이핑</td></tr>
+        </tbody>
+      </table>
+
+      <h3>핵심 기능 비교 (별점)</h3>
+      <table class="table">
+        <thead><tr><th>기능 항목</th><th>Google AI Studio (개발 중심)</th><th>Gemini Canvas (콘텐츠/앱 제작 중심)</th></tr></thead>
+        <tbody>
+          <tr><td><strong>웹 개발</strong> (간단한 페이지~복잡한 앱)</td><td>★★★★★</td><td>★★★★☆</td></tr>
+          <tr><td><strong>게임 제작</strong></td><td>★★★★★</td><td>★★★☆☆</td></tr>
+          <tr><td><strong>코드 수정/디버깅</strong></td><td>★★★★★</td><td>★★★★☆</td></tr>
+          <tr><td><strong>여러 파일/프로젝트 관리</strong></td><td>★★★★★</td><td>★★★½☆</td></tr>
+          <tr><td><strong>백엔드/DB 연동</strong></td><td>★★★★★</td><td>★★☆☆☆</td></tr>
+          <tr><td><strong>API 연동</strong></td><td>★★★★★</td><td>★★★☆☆</td></tr>
+          <tr><td><strong>GitHub 연동</strong></td><td>★★★★★</td><td>★★☆☆☆</td></tr>
+          <tr><td><strong>배포 (Cloud Run 등)</strong></td><td>★★★★★</td><td>★★☆☆☆</td></tr>
+          <tr><td><strong>문서/슬라이드/퀴즈</strong></td><td>★★☆☆☆</td><td>★★★★★</td></tr>
+          <tr><td><strong>사용 난이도</strong></td><td>★★½☆☆</td><td>★★★★★</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box tip">
+        <span class="box-title">💡 이렇게 선택하세요!</span>
+        <b>실제 웹앱을 개발하고, 확장하고 싶다면?</b> 여러 파일을 관리하고, 백엔드와 연동해 실제 서비스로 발전시키고 싶을 때는 Google AI Studio가 더 적합합니다.<br>
+        <b>빠르게 아이디어를 만들고, 간단한 앱이나 콘텐츠를 제작하고 싶다면?</b> 문서, 슬라이드, 퀴즈, 간단한 앱을 빠르게 만들고 바로 써보고 싶을 때는 Gemini Canvas가 더 좋습니다.
+      </div>
+      <div class="box note">
+        <span class="box-title">📌 한마디로 정리하면!</span>
+        "Google AI Studio는 개발의 깊이를, Gemini Canvas는 제작의 속도를 더합니다."
       </div>
 
       <h3>좋은 바이브코딩 프롬프트 — AI에게 이렇게 말하세요</h3>
       <table class="table">
-        <thead><tr><th>요소</th><th>질문</th><th>예시</th></tr></thead>
+        <thead><tr><th>요소</th><th>질문</th><th>실습 프롬프트에서의 해당 부분</th></tr></thead>
         <tbody>
           <tr><td><strong>목적</strong></td><td>무엇을 만들 것인가?</td><td>"AI 윤리 자가진단 웹앱을 만들어줘"</td></tr>
           <tr><td><strong>사용자</strong></td><td>누가 사용하는가?</td><td>"대학생을 위한"</td></tr>
@@ -179,34 +312,37 @@
         <span class="box-title">📌 핵심</span>
         "만들어줘"보다 "무엇을 어떻게 만들어야 하는지" 설명하세요.
       </div>
-
-      <h3>실습 1 · Google AI Studio로 게임 만들어보기</h3>
-      <p class="lead"><a href="https://aistudio.google.com" target="_blank" rel="noopener">aistudio.google.com</a> — Google 계정으로 바로 시작, 브라우저만 있으면 별도 설치 없이 한 문장으로 앱을 만들 수 있습니다.</p>
-      <div class="prompt">
-        <div class="prompt-head"><span class="label">실습 1 · 기억력 장보기 게임 프롬프트</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
-        <pre>기억력 장보기 게임 만들어줘.
-- 총 10문제 (1~5번은 1개, 6~10번은 2개 기억)
-- 기억할 아이템을 1초 보여주고 사라짐
-- 16개 장보기 품목(사과·바나나·우유 등)이 4×4로
-  나타나면 클릭해서 정답 맞히기
-- 정답·오답 표시 후 1초 뒤 자동으로 다음 문제
-- 끝나면 점수 + 「다시 하기」 버튼</pre>
-      </div>
-      <div class="prompt">
-        <div class="prompt-head"><span class="label">이어서 · 디자인 수정 프롬프트</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
-        <pre>배경을 진하게, 아이콘과 글씨는 조금더 크게,
-애니메이션 스타일, 입체적인 그리드 형식으로 만들어줘</pre>
-      </div>
     </section>
 
     <section class="card" id="practice">
-      <h2><span class="num">04</span>실습 · AI 윤리 자가진단 웹앱 만들기</h2>
-      <p class="lead">"AI를 만들면서 AI 윤리를 직접 적용해본다." 이번 실습은 ChatGPT의 Canvas 기능으로 진행합니다 — chatgpt.com 접속 → 새 대화 → 프롬프트 입력 → 오른쪽 Canvas 창에서 코드/미리보기 확인.</p>
+      <h2><span class="num">04</span>실습 · AI 윤리 자가진단 웹앱과 미니게임 만들기</h2>
+      <p class="lead"><b>오늘 만들 서비스 — AI 윤리 자가진단 웹앱</b> (TOOL · AI Studio). "AI를 만들면서 AI 윤리를 직접 적용해본다."</p>
+
+      <table class="table">
+        <thead><tr><th>화면 예시 · AI Ethics CHECK</th><th>내용</th></tr></thead>
+        <tbody>
+          <tr><td><strong>질문</strong></td><td>Q1. 개인정보가 포함되어 있나요? ○ 예 ○ 아니오 · Q2. 사실 확인을 했나요? ○ 예 ○ 아니오 · Q3. 차별 가능성이 있나요? ○ 예 ○ 아니오</td></tr>
+          <tr><td><strong>버튼</strong></td><td>[AI 윤리 진단하기]</td></tr>
+          <tr><td><strong>진단 결과</strong></td><td>⚠️ 추가 확인이 필요합니다 — 개인정보 항목에서 주의가 필요해요</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Google AI Studio 한눈에</h3>
+      <p class="lead">유성구청 · 바이브코딩으로 업무 앱 만들기 — <a href="https://aistudio.google.com" target="_blank" rel="noopener">aistudio.google.com</a> · Google 계정으로 바로 시작</p>
+      <table class="table">
+        <thead><tr><th>특징</th><th>내용</th></tr></thead>
+        <tbody>
+          <tr><td><strong>한 문장 입력</strong></td><td>「○○ 앱 만들어줘」 한국어로 OK</td></tr>
+          <tr><td><strong>브라우저만</strong></td><td>설치 필요 없음, 어디서나 접속</td></tr>
+          <tr><td><strong>즉시 공유</strong></td><td>URL 한 줄로 부서 동료에게 전달</td></tr>
+        </tbody>
+      </table>
 
       <h3>STEP 1 · 기본 웹앱 만들기</h3>
-      <p class="lead">실행 후 확인할 것: ☑ 질문 5개가 정상적으로 보이는가? ☑ 답변 선택 시 점수가 계산되는가? ☑ 모바일 화면에서도 깨지지 않는가?</p>
+      <p class="lead">ChatGPT 접속 → 새 대화 시작 → 아래 프롬프트 붙여넣기 → 오른쪽 Canvas 창에서 결과 확인</p>
+      <p class="muted">실행 후 확인할 것: ☑ 질문 5개가 정상적으로 보이는가? ☑ 답변 선택 시 점수가 계산되는가? ☑ 모바일 화면에서도 깨지지 않는가?</p>
       <div class="prompt">
-        <div class="prompt-head"><span class="label">실습 2 · 기본 웹앱 프롬프트</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
+        <div class="prompt-head"><span class="label">실습 1 · 기본 웹앱 프롬프트</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
         <pre>대학생을 위한 AI 윤리 자가진단 웹앱을 만들어줘.
 5개의 질문에 답하면 AI 윤리 점수를 계산하고
 결과에 따라 "안전하게 사용하세요" / "추가 확인이 필요합니다"
@@ -214,11 +350,17 @@
 깔끔하고 직관적인 디자인으로 만들고
 PC와 모바일에서 모두 사용할 수 있게 해줘</pre>
       </div>
+      <div class="box note">
+        <span class="box-title">📌 추가 후 앱 버전 (결과 화면 예시)</span>
+        'ACADEMIC AI INTEGRITY · 대학생 AI 윤리 자가진단' — 상황 예시: "기말 보고서 제출이 3일 남은 상황, 교수님이 10페이지 분량의 심층 리포트를 요구했습니다." → 질문: "과제나 리포트 작성 시 생성형 AI 문장을 어떻게 활용하시나요?" (글의 저작 주체성과 비판적 사고력은 대학 학술 활동의 핵심입니다.)<br>
+        A. 브레인스토밍과 개요(목차) 구상용으로만 영감을 얻고, 본문 문장은 모두 직접 분석·작성한다. / B. AI가 작성한 초안을 토대로 내 생각과 반박, 추가 문헌을 대폭 보완하여 글을 재구성한다. / C. AI가 작성한 문맥과 단어를 몇 군데만 패러프레이징(유의어 교체)하여 그대로 제출한다. / D. 원하는 분량과 주제로 프롬프트를 넣어 생성된 완성본을 거의 그대로 복사·붙여넣기하여 제출한다.<br>
+        메뉴: 과제 체크리스트 · AI 인용 가이드 / 버튼: 이전 문항 · 다음 문항
+      </div>
 
       <h3>STEP 2 · 실행하고 확인하기</h3>
       <p class="lead">PROMPT → CODE → RUN → CHECK → FIX → RUN AGAIN. 첫 결과가 완벽하지 않아도 괜찮습니다. AI와 대화하면서 개선합니다.</p>
       <div class="prompt">
-        <div class="prompt-head"><span class="label">실습 3 · 수정 요청 예시</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
+        <div class="prompt-head"><span class="label">실습 2 · 수정 요청 예시</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
         <pre>"버튼 색깔이 잘 안 보여. 좀 더 눈에 띄는 색으로 바꿔줘."
 "질문과 질문 사이에 여백을 좀 더 넣어줘."
 "점수 결과가 나올 때 애니메이션 효과를 추가해줘."
@@ -226,16 +368,15 @@ PC와 모바일에서 모두 사용할 수 있게 해줘</pre>
       </div>
 
       <h3>STEP 3 · 윤리 기능 추가</h3>
-      <p class="lead">이 5가지 항목은 앞서 본 'AI 윤리 5가지 체크'와 같은 축입니다 — 이론을 코드 기능으로 옮기는 과정입니다. (설명이 어렵다면 "대학 신입생도 이해할 수 있게 더 쉬운 표현으로 바꿔줘"라고 이어서 요청하세요.)</p>
+      <p class="lead">→ 이 5가지 항목은 앞서 본 'AI 윤리에서 꼭 확인할 5가지 체크'와 같은 축입니다. 이론을 코드 기능으로 옮기는 과정입니다.<br>설명이 어렵다면 → "대학 신입생도 이해할 수 있게 더 쉬운 표현으로 바꿔줘"</p>
       <div class="prompt">
-        <div class="prompt-head"><span class="label">실습 4 · 윤리 점검 기능 추가 프롬프트</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
+        <div class="prompt-head"><span class="label">실습 3 · 윤리 점검 기능 추가 프롬프트</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
         <pre>현재 웹앱에 AI 윤리 점검 기능을 추가해줘.
 다음 5가지 항목을 각각 점검하도록 해줘.
 1. 개인정보  2. 허위정보 가능성  3. 편향과 차별
 4. 저작권  5. AI 생성물 표시
-
-각 항목의 결과를 "주의 필요 / 확인 필요 / 문제 없음" 형태로
-보여주고, 이해하기 쉬운 설명도 함께 보여줘.</pre>
+각 항목의 결과를 "주의 필요 / 확인 필요 / 문제 없음"
+형태로 보여주고, 이해하기 쉬운 설명도 함께 보여줘.</pre>
       </div>
 
       <h3>STEP 4 · 내가 만든 AI 검증하기</h3>
@@ -245,10 +386,123 @@ PC와 모바일에서 모두 사용할 수 있게 해줘</pre>
       </div>
       <p class="lead">AI가 만든 결과도 사람이 검증해야 합니다.</p>
       <div class="prompt">
-        <div class="prompt-head"><span class="label">실습 5 · 검증 안내 문구 추가 프롬프트</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
-        <pre>"이 진단은 참고용이며, 최종 판단은 사용자 본인이 해야 한다"는
-안내 문구를 눈에 띄게 추가해줘.</pre>
+        <div class="prompt-head"><span class="label">실습 4 · 검증 안내 문구 추가 프롬프트</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
+        <pre>"이 진단은 참고용이며, 최종 판단은
+사용자 본인이 해야 한다"는 안내 문구를
+눈에 띄게 추가해줘.</pre>
       </div>
+      <p class="muted">완성 화면 예시: '대학생을 위한 생성형 AI 윤리 자가진단' — "ChatGPT, Claude 등 생성형 AI를 과제에 쓸 때 표절일까 아닐까 고민되셨나요? 5개의 질문에 답하면 AI 윤리 점수와 함께 '안전하게 사용하세요' / '추가 확인이 필요합니다' 등의 진단 결과를 안내해 드립니다." [지금 5문항 진단 시작하기] [과제물 5대 항목 실시간 점검기] ⚠️ 안내: "이 진단은 참고용이며, 최종 판단은 사용자 본인이 해야 합니다."</p>
+
+      <h3>STEP 5 · 배포 (SNS, 커뮤니티에 배포)</h3>
+      <p class="lead">만든 웹앱을 SNS·커뮤니티에 소개하는 글입니다.</p>
+      <div class="prompt">
+        <div class="prompt-head"><span class="label">실습 5 · 배포 소개글</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
+        <pre>[대학생을 위한 생성형 AI 윤리 자가진단 &amp; 5대 항목 점검]
+과제나 리포트 제출 전 표절·할루시네이션(가짜 통계)·개인정보 유출 위험을
+ 3분 만에 무료로 점검해보세요!
+- 5문항 AI 윤리 지수 자가진단
+- 개인정보/허위정보/편향/저작권/AI표시 5대 항목 실시간 점검
+- 대학 리포트용 표준 AI 인용 서식(APA/Chicago) 무료 제공
+👉 무료 접속 링크:
+https://ais-pre-icw5mnoozjqsl334ko4uce-594857994253.asia-northeast1.run.app</pre>
+      </div>
+
+      <h3>(추가) 기억력 장보기 게임</h3>
+      <table class="table">
+        <thead><tr><th>규칙</th><th>내용</th></tr></thead>
+        <tbody>
+          <tr><td><strong>총 10문제</strong></td><td>아이템 1초 → 4×4 배열에서 찾기</td></tr>
+          <tr><td><strong>1~5번 문제</strong></td><td>1개 아이템 기억하기</td></tr>
+          <tr><td><strong>6~10번 문제</strong></td><td>2개 아이템 기억하기</td></tr>
+          <tr><td><strong>결과 표시</strong></td><td>정답·오답 후 1초, 자동으로 다음 문제</td></tr>
+        </tbody>
+      </table>
+      <p class="muted">화면 예시: 기억력 장보기 게임 — "두뇌 순간 기억력 트레이닝", "1초 동안 스쳐 지나가는 품목을 외우고, 4×4 매대에서 정확하게 찾아보세요!" · 게임 규칙 안내(총 10문제 단계별 난이도 / 1초 동안만 깜빡 노출 / 4×4 입체 매대에서 클릭하여 정답 맞히기 / 정답·오답 확인 후 1초 뒤 자동 진행) · 내 최고 점수 · [게임 시작하기]</p>
+      <div class="prompt">
+        <div class="prompt-head"><span class="label">실습 6 · 기억력 장보기 게임 프롬프트 (즉석에서 타이핑 가능한 짧은 버전)</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
+        <pre>기억력 장보기 게임 만들어줘.
+- 총 10문제 (1~5번은 1개, 6~10번은 2개 기억)
+- 기억할 아이템을 1초 보여주고 사라짐
+- 16개 장보기 품목(사과·바나나·우유 등)이 4×4로
+  나타나면 클릭해서 정답 맞히기
+- 정답·오답 표시 후 1초 뒤 자동으로 다음 문제
+- 끝나면 점수 + 「다시 하기」 버튼</pre>
+      </div>
+      <div class="prompt">
+        <div class="prompt-head"><span class="label">이어서 · 수정 프롬프트</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
+        <pre>배경을 진하게, 아이콘과 글씨는 더 크게, 애니메이션 스타일, 입체적인 그리드 형식으로 만들어줘</pre>
+      </div>
+
+      <h3>두더지 게임 1단계 프롬프트</h3>
+      <div class="prompt">
+        <div class="prompt-head"><span class="label">실습 7 · 두더지 잡기 게임 (1단계)</span><button class="copy-btn" onclick="copyPrompt(this)">복사</button></div>
+        <pre>HTML, CSS, JavaScript를 사용하여 웹 브라우저에서 바로 실행할 수 있는
+두더지 잡기 게임을 만들어줘.
+
+1. 게임 기본 구성
+- 게임 화면은 한눈에 보기 좋은 중앙 정렬
+- 화면 상단에 게임 제목 표시
+- 점수 표시
+- 남은 시간 표시
+- 게임 시작 버튼 제공
+- 게임판에는 3×3 형태로 총 9개의 구멍을 배치
+- 게임이 시작되면 9개의 구멍 중 하나에서 두더지가 무작위로 나타남
+- 사용자가 두더지를 클릭하면 점수가 올라감
+- 두더지는 잠시 나타났다가 사라지고 다른 위치에서 다시 나타남
+
+2. 게임 규칙
+- 게임 시간은 30초
+- 두더지를 클릭하면 +1점
+- 두더지가 나타난 위치를 클릭하면 즉시 사라짐
+- 두더지는 일정한 간격으로 무작위 위치에 등장
+- 게임 시간이 0초가 되면 게임 종료
+- 게임 종료 후 최종 점수를 보여줌
+- 다시 시작 버튼으로 새로운 게임을 시작할 수 있도록 함
+
+3. 화면 디자인
+- 밝고 친근한 게임 분위기
+- 어린이부터 성인까지 쉽게 사용할 수 있는 디자인
+- 두더지는 귀엽고 재미있는 캐릭터 형태
+- 구멍은 둥근 형태로 표현
+- 버튼은 크고 눈에 잘 띄게 제작
+- 점수와 시간은 게임 중 쉽게 확인할 수 있도록 크게 표시
+- 모바일과 PC에서 모두 사용할 수 있도록 반응형으로 제작
+
+4. 사용자 경험
+게임을 처음 실행했을 때는 시작 버튼을 보여준다.
+"게임 시작" 버튼을 누르면 카운트다운 없이 바로 게임이 시작된다.
+두더지를 클릭할 때마다 시각적인 반응이 나타나도록 한다.
+게임이 끝나면 다음 내용을 보여준다.
+"게임 종료!"
+"최종 점수: ○○점"
+그리고 "다시 하기" 버튼을 제공한다.
+
+5. 기술 조건
+- HTML, CSS, JavaScript로 구현
+- 별도의 서버 없이 브라우저에서 실행 가능하도록 제작
+- 외부 라이브러리는 가능하면 사용하지 않음
+- 게임의 핵심 기능이 정상적으로 작동하는지 확인
+- 버튼, 점수, 타이머, 두더지 등장, 게임 종료 기능을 모두 실제로 작동하도록 구현
+
+6. 중요
+먼저 기능이 제대로 작동하는 것을 가장 중요하게 생각한다.
+코드를 작성한 후 다음 항목을 스스로 점검해줘.
+- 게임 시작 버튼이 정상적으로 작동하는가?
+- 타이머가 30초부터 정상적으로 감소하는가?
+- 두더지가 무작위 위치에 나타나는가?
+- 두더지를 클릭하면 점수가 올라가는가?
+- 게임 종료가 정상적으로 되는가?
+- 다시 하기 버튼이 정상적으로 작동하는가?
+- PC와 모바일 화면에서 게임판이 깨지지 않는가?
+문제가 발견되면 직접 수정한 후 최종적으로 실행 가능한 상태로 완성해줘.</pre>
+      </div>
+
+      <h3>두더지 게임 2단계 프롬프트</h3>
+      <div class="box tip">
+        <span class="box-title">💡 직접 도전!</span>
+        직접 향상시키고자 하는 기능들을 추가해서 프롬프트를 제작!!
+      </div>
+      <p class="muted">화면 예시: CLASSIC WHACK-A-MOLE 2.0 · 두더지 잡기 게임 — 난이도(보통) · 현재 점수 · 남은 시간 · 최고 점수 · 소리 켬 / 3×3 구멍 / 일반: +1점 · 황금: +5점 · 폭탄: -3점 · 연속 콤보 보너스!</p>
     </section>
 
     <section class="card" id="wrap">
@@ -256,9 +510,10 @@ PC와 모바일에서 모두 사용할 수 있게 해줘</pre>
 
       <div class="box warn">
         <span class="box-title">⚠ 가장 중요한 질문 — AI에게 윤리를 맡겨도 될까?</span>
-        <b>NO.</b> AI → 결과 생성 / 사람 → 판단 → 검증 → 책임. AI는 판단을 도울 수 있지만 책임까지 대신할 수는 없습니다. (오프닝에서 던졌던 "책임은 누가 지는가?"라는 질문의 답이 바로 이것입니다.)
+        <b>NO.</b> AI → 결과 생성 / 사람 → 판단 → 검증 → 책임. AI는 판단을 도울 수 있지만 책임까지 대신할 수는 없습니다. 기억하시나요? 오프닝에서 던졌던 질문의 답이 바로 이것입니다.
       </div>
 
+      <h3>CLOSE · AI를 잘 쓰는 사람에서 책임 있게 쓰는 사람으로</h3>
       <ol class="steps">
         <li><b>KNOW</b><span>AI를 이해하고</span></li>
         <li><b>USE</b><span>AI를 활용하고</span></li>
@@ -268,7 +523,7 @@ PC와 모바일에서 모두 사용할 수 있게 해줘</pre>
 
       <div class="box tip">
         <span class="box-title">💡 오늘의 한 문장</span>
-        AI에게 만드는 것을 맡길 수는 있지만, 책임까지 맡길 수는 없습니다. AI를 잘 쓰는 사람에서, 책임 있게 쓰는 사람으로.
+        "AI에게 만드는 것을 맡길 수는 있지만, 책임까지 맡길 수는 없습니다."
       </div>
     </section>
 
