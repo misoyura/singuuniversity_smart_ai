@@ -32,7 +32,7 @@ const SESSIONS = [
     id: 2,
     title: "AI 이미지 생성과 실습",
     subtitle: "프롬프트 설계부터 GPT Image / Nanobanana 실습까지",
-    desc: "이미지 생성 AI의 원리와 프롬프트 기본구조(주제·구도·스타일·디테일)부터 GPT Image 2.0, 나노바나나·믹스보드 실습까지.",
+    desc: "이미지 생성 AI의 원리와 프롬프트 기본구조(주제·구도·스타일·디테일)부터 GPT Image 2.0 실습 10종, 나노바나나로 AI 캐릭터·매거진 표지·여행 포스터 만들기까지.",
     href: "session_2.html",
     anchors: [
       { href: "#flow", label: "오늘의 흐름" },
